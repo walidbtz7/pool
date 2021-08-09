@@ -22,11 +22,22 @@ void	ft_print_comb(void)
 				ft_putchar(a);
 				ft_putchar(b);
 				ft_putchar(c);
-				write(1, ", ", 1);
+				if (!(a == 7 &&  b == 8 && c == 9))
+				{
+					write(1, ", ", 2);
+				}
+				else
+				{
+					write(1,"test",1);
+				}
 				c++;
 			}
 			b++;
 		}
 		a++;
 	}	
+}
+int main(void)
+{
+	ft_print_comb();
 }
