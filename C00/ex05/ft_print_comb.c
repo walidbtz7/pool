@@ -4,6 +4,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+void	condition(char a, char b, char c)
+{
+	if (!(a == '7' && b == '8' && c == '9'))
+	{
+		write(1, ", ", 2);
+	}
+}
+
 void	ft_print_comb(void)
 {
 	char	a;
@@ -22,22 +30,11 @@ void	ft_print_comb(void)
 				ft_putchar(a);
 				ft_putchar(b);
 				ft_putchar(c);
-				if (!(a == 7 &&  b == 8 && c == 9))
-				{
-					write(1, ", ", 2);
-				}
-				else
-				{
-					write(1,"test",1);
-				}
+				condition(a, b, c);
 				c++;
 			}
 			b++;
 		}
 		a++;
 	}	
-}
-int main(void)
-{
-	ft_print_comb();
 }
