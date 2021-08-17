@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 15:17:17 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/16 15:39:41 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/17 11:02:53 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/17 11:13:22 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest,	char *src)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
-	i = 1;
+	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (src[i] != '\0')
 	{
 		i++;
 	}
-	while (src[j] != '\0')
+	while (src[j] != '\0' && j < i - 1 )
 	{
-		dest[i] = src[j];
-		j++;
+		dest[i] = src[i];
 		i++;
+		j++;
 	}
 	dest[i] = '\0';
-	return (dest);
+	return (i);
 }

@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 15:17:17 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/16 15:39:41 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/17 09:23:04 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/17 09:28:23 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest,	char *src)
+int	ft_str_is_alpha(char *str)
 {
 	int	i;
-	int	j;
 
-	i = 1;
-	j = 0;
-	while (dest[i] != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
+		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' || str[i] > 'z'))
+		{
+			return (0);
+		}
 		i++;
 	}
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
