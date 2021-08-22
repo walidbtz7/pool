@@ -1,0 +1,5 @@
+Credentials cache: API:FF496077-EBD6-47ED-BE84-8AA8326BD6F4
+        Principal: wboutzou@1337.MA
+
+  Issued                Expires               Principal
+Aug  2 17:09:13 2021  Aug  9 17:09:13 2021  krbtgt/1337.MA@1337.MA
