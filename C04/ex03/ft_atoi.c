@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 11:24:01 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/22 15:43:37 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/22 10:05:05 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/22 10:07:17 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strncmp(char	*s1, char	*s2, unsigned int n)
+int	ft_atoi(char	*str)
 {
-	unsigned int	i;
+	int	i;
+	int	total;
+	int	s;
 
+	s = 1;
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
+	total = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 	{
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	while (str[i] == 43 || str[i] == 45)
+	{
+		if (str[i] == 43)
+			s *= 1;
+		else
+			s *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		total = total * 10 + (str[i] - 48);
+		i++;
+	}
+	return (total * s);
 }

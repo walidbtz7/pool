@@ -1,15 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 15:17:17 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/16 15:39:41 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/19 10:26:28 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/21 14:13:40 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest,	char *src)
+char	*ft_strcat(char	*dest, char	*src)
 {
 	int	i;
 	int	j;
@@ -17,14 +17,12 @@ char	*ft_strcat(char	*dest,	char *src)
 	i = 1;
 	j = 0;
 	while (dest[i] != '\0')
-	{
 		i++;
-	}
 	while (src[j] != '\0')
 	{
 		dest[i] = src[j];
-		j++;
 		i++;
+		j++;
 	}
 	dest[i] = '\0';
 	return (dest);

@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 11:24:01 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/22 15:43:37 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/19 10:14:42 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/19 10:16:37 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strncmp(char	*s1, char	*s2, unsigned int n)
+unsigned int	ft_strlcat(char	*dest, char	*src, unsigned int size)
 {
 	unsigned int	i;
+	unsigned int	j;
+	unsigned int	total;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
-	{
+	j = 0;
+	while (src[i] != '\0')
 		i++;
+	while (dest[j] != '\0')
+		j++;
+	if (size <= j)
+		total = size + i;
+	else
+	{
+		total = j + i;
+		i = 0;
+		while (src[i] != '\0' && j < size - 1 )
+		{
+			dest[j] = src[i];
+			i++;
+			j++;
+		}
+		dest[j] = '\0';
 	}
-	return (s1[i] - s2[i]);
+	return (total);
 }

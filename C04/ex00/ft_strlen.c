@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 11:24:01 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/22 15:43:37 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/19 13:32:59 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/19 13:34:17 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strncmp(char	*s1, char	*s2, unsigned int n)
+int	ft_strlen(char	*str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
+	while (str[i] != '\0')
 	{
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (i);
 }

@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/16 11:24:01 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/22 15:43:37 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/19 14:51:33 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/19 14:51:37 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strncmp(char	*s1, char	*s2, unsigned int n)
+#include<unistd.h>
+void	ft_putchar(char c)
 {
-	unsigned int	i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n - 1)
+void	ft_putnbr(int nb)
+{
+	if (nb < 0)
 	{
-		i++;
+		ft_putchar('-');
+		nb = nb * -1;
 	}
-	return (s1[i] - s2[i]);
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
 }

@@ -6,28 +6,26 @@
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 15:41:06 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/16 15:43:34 by wboutzou         ###   ########.fr       */
+/*   Updated: 2021/08/22 14:18:14 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
-char	*ft_strcat(char	*dest,	char *src, unsigned	int	n)
+char	*ft_strncat(char	*dest,	char *src, unsigned	int	n)
 {
-	int i;
-	int j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 1;
 	j = 0;
-	while(dest[i] != '\0')
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-
-	while(src[j] != '\0' && j < n )
+	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];
 		j++;
 		i++;
 	}
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }
