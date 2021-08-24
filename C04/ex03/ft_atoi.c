@@ -6,7 +6,7 @@
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 10:05:05 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/24 10:46:10 by wboutzou         ###   ########.fr       */
+/*   Updated: 2021/08/24 12:12:29 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_atoi(char	*str)
@@ -17,7 +17,7 @@ int	ft_atoi(char	*str)
 
 	s = 1;
 	i = 0;
-	total = 1;
+	total = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 	{
 		i++;
