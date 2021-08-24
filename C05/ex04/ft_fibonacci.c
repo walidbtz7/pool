@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 10:40:30 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/23 10:45:00 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/24 10:35:54 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/24 10:36:08 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest, char	*src)
+int	ft_fibonacci(int	index)
 {
-	int	i;
-	int	j;
+	int	x;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
+	x = 0;
+	if (index == 1)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		x = 1;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (index == 0)
+	{
+		x = 0;
+	}
+	if (index < 0)
+	{
+		return (-1);
+	}
+	if (index >= 2)
+	{
+		x = ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
+	}
+	return (x);
 }
+/*#include<stdio.h>
+#include<stdlib.h>
+int main(int	c, char	**v)
+{
+	printf("%d",ft_fibonacci(atoi(v[1])));
+	return	0;
+}*/

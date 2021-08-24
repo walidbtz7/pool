@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 10:40:30 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/23 10:45:00 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/24 10:32:48 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/24 10:34:38 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest, char	*src)
+int	ft_recursive_power(int	nb, int	power)
 {
+	int	total;
 	int	i;
-	int	j;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
+	total = 1;
+	i = power;
+	if (i == 0)
+		return (1);
+	if (i < 0)
+		return (0);
+	if (i > 0)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		total = nb * ft_recursive_power(nb, i - 1);
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (total);
 }
+/*
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	printf("%d",ft_recursive_power(4,4));
+}*/

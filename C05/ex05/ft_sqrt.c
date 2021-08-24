@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 10:40:30 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/23 10:45:00 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/24 10:37:30 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/24 10:37:53 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest, char	*src)
-{
+int	ft_sqrt(int	ab)
+{	
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
+	if (ab <= 0)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		return (0);
 	}
-	dest[i] = '\0';
-	return (dest);
+	else
+	{
+		while (ab != i * i)
+		{
+			i++;
+		}
+	}
+	return (i);
 }
+/*
+#include<stdio.h>
+#include<stdlib.h>
+int main(int c,char **v)
+{
+	printf("%d",ft_sqrt(atoi(v[1])));
+	return 0;
+}*/

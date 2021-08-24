@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 10:40:30 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/23 10:45:00 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/24 10:23:04 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/24 10:26:31 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest, char	*src)
+int	ft_interative_factorial(int	nb)
 {
 	int	i;
-	int	j;
+	int	total;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
+	i = nb;
+	total = 1;
+	if (nb == 0)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		total = 1;
+		return (total);
 	}
-	dest[i] = '\0';
-	return (dest);
+	else if (nb > 0)
+	{
+		while (i > 1)
+		{
+			total = total * i;
+			i--;
+		}
+		return (total);
+	}
+	else
+		return (0);
 }
+/*#include<stdlib.h>
+#include<stdio.h>
+int	main(int c,char **v)
+{
+	printf("%d",ft_interative_factorial(atoi(v[1])));
+	return 0;
+}*/

@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 10:40:30 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/23 10:45:00 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/22 17:28:02 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/24 10:28:51 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strcat(char	*dest, char	*src)
+int	ft_recursive_factorial(int	nb)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	if (nb < 0)
+		return (0);
+	else if (nb == 0)
+		return (1);
+	else
+		return (nb * ft_recursive_factorial(nb - 1));
 }
+/*#include<stdlib.h>
+#include<stdio.h>
+int	main(int c,char **v)
+{
+	printf("%d",ft_recursive_factorial(atoi(v[1])));
+	return 0;
+}*/

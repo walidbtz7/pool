@@ -1,39 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/22 10:05:05 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/24 10:46:10 by wboutzou         ###   ########.fr       */
+/*   Created: 2021/08/24 10:42:07 by wboutzou          #+#    #+#             */
+/*   Updated: 2021/08/24 10:43:16 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_atoi(char	*str)
+int	ft_is_prime(int	nb)
 {
 	int	i;
-	int	total;
-	int	s;
 
-	s = 1;
-	i = 0;
-	total = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
+	i = 2;
+	if (nb % 2 == 0)
 	{
-		i++;
+		return (0);
 	}
-	while (str[i] == 43 || str[i] == 45)
+	else
 	{
-		if (str[i] == 43)
-			s *= 1;
-		else
-			s *= -1;
-		i++;
+		while (i < (nb / 2))
+		{
+			if (nb % i == 0)
+				return (0);
+			i++;
+		}
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		total = total * 10 + (str[i] - 48);
-		i++;
-	}
-	return (total * s);
+	return (1);
 }
+
+int	ft_next_prime(int	nb)
+{
+	int	i;
+
+	i = nb;
+	if (i <= 2)
+	{
+		return (2);
+	}
+	else
+	{
+		while (!ft_is_prime(i))
+			i++;
+	}
+	return (i);
+}
+/*#include<stdio.h>
+#include<stdlib.h>
+int main(int c, char **v)
+{
+	printf("%d",ft_next_prime(atoi(v[1])));
+
+	return 0;
+}*/
