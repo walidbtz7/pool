@@ -6,7 +6,7 @@
 /*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 14:51:33 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/24 12:07:28 by wboutzou         ###   ########.fr       */
+/*   Updated: 2021/08/24 13:53:28 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<unistd.h>
@@ -36,4 +36,9 @@ void	ft_putnbr(int nb)
 		else
 			ft_putchar(nb + '0');
 	}
+}
+int main()
+{
+	ft_putnbr(-2147483648);
+	return 0;
 }
