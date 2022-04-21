@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 13:43:29 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/24 10:45:22 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:32:03 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
+
+
 void	ft_putstr(char	*str)
 {
 	while (*str)
