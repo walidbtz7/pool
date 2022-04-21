@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 09:21:01 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/17 09:21:07 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:24:35 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
