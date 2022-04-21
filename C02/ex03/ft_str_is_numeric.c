@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 09:29:07 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/17 09:29:12 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:26:12 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_str_is_numeric(char *str)
 {
 	int	i;
