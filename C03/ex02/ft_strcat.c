@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 10:40:30 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/23 10:45:00 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:30:15 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 char	*ft_strcat(char	*dest, char	*src)
 {
 	int	i;
