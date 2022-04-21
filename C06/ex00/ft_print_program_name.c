@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 15:17:44 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/25 14:52:42 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:33:40 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
+
+
 int	main(int argc, char **argv )
 {
 	int	i;
