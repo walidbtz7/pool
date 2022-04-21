@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 10:58:10 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/17 11:02:01 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:28:26 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 char	*ft_strlowcase(char *str)
 {
 	int	i;
