@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 09:23:04 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/17 09:28:23 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:26:38 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
