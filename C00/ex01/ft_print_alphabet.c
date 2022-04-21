@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/08 12:20:46 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/08 12:32:15 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:19:13 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
+
 void	ft_print_alphabet(void)
 {
 	char	c;
