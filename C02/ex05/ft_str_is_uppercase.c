@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 09:30:39 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/17 09:31:01 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:27:19 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_str_is_uppercase(char *str)
 {
 	int	i;
