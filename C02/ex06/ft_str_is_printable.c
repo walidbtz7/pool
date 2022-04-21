@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 09:31:49 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/17 09:36:38 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:27:48 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_str_is_printable(char *str)
 {
 	int	i;
