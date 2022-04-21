@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wboutzou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wboutzou <wboutzou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 14:07:45 by wboutzou          #+#    #+#             */
-/*   Updated: 2021/08/21 15:25:42 by wboutzou         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:30:30 by wboutzou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 char	*ft_strstr(char	*str, char *to_find)
 {
 	int	i;
